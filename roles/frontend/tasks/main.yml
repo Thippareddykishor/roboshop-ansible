@@ -25,7 +25,7 @@
     state: absent
 
 - name: create app content folder
-  ansible.buitlin.file: 
+  ansible.builtin.file: 
     path: /usr/share/nginx/html
     state: directory
 
