@@ -13,6 +13,6 @@
 - name: install node js 
   ansible.builtin.shell: npm install
 
-- name: include artifact download 
+- name: include systemd service 
   ansible_builtin_include_tasks:
      file: systemd_setup.yml
