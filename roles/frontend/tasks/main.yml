@@ -30,7 +30,7 @@
     state: directory
 
 - name: download and extract app content
-  ansible.buitin.unarchive: 
+  ansible.builtin.unarchive: 
     src:  https://roboshop-artifacts.s3.amazonaws.com/frontend-v3.zip
     dest: /usr/share/nginx/html
     remote_src: yes
