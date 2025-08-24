@@ -8,4 +8,4 @@
     name: "{{ component_name }}"
     state: restarted 
     enabled: yes
-    deamon_reload: yes
+    daemon-reload: yes
