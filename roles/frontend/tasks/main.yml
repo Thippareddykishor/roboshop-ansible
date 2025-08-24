@@ -15,7 +15,7 @@
      state: started
 
 - name: copy nginx config file
-  ansibel.builtin.copy: 
+  ansible.builtin.copy: 
     src: nginx.conf
     dest: /etc/nginx/nginx.conf
 
