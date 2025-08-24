@@ -12,6 +12,8 @@
   ansible.builtin.dnf:
     name: mongodb-mongosh
 
-- name:: load master data
-  ansible.builtin.shell: mongosh --host 172.31.89.145 </app/db/master-data.js 
+# - name:: load master data
+#   ansible.builtin.shell: mongosh --host 172.31.89.145 </app/db/master-data.js 
 
+- name: Load master data`
+  ansible.builtin.shell: mongosh --host mongodb-dev.kommanuthala.store </app/db/master-data.js
