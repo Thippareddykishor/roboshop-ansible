@@ -14,3 +14,23 @@
      name: nginx
      state: started
 
+- name: copy nginx config file
+  ansibel.builtin.copy: 
+    src: nginx.conf
+    dest: /etc/nginx/nginx.conf
+
+- name: remove old folder
+  ansible.builtin.file:
+    path: /usr/share/nginx/html
+    state: absent
+
+- name: create app content folder
+  ansible.buitlin.floder: 
+    path: /usr/share/nginx/html
+    state: directory
+
+- name: download and extract app content
+  ansible.buitin.unarchive: 
+    src:  https://roboshop-artifacts.s3.amazonaws.com/frontend-v3.zip
+    dest: /usr/share/nginx/html
+    remote_src: yes
