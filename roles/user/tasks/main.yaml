@@ -1,9 +1,3 @@
-# - name: load node
-#   ansible.builtin.include_role:
-#     name: common
-#     task_from: nodejs
-
-
 - name: load node js
   ansible.builtin_include_role: 
     name: common
