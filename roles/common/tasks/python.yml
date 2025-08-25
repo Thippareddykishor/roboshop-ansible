@@ -8,3 +8,15 @@
 
 - name: include artifact download
   ansible.buitlin.include_tasks: 
+    name: common
+    file: artifact_download.yml
+
+- name: install python dependies
+  ansible.builtin.sell:
+    pip3 install -r requirements.txt
+  args:
+    chdir: /app
+
+- name: include systmd service
+  ansible.builtin.include_tasks:
+    
