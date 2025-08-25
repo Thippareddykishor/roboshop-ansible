@@ -1,6 +1,6 @@
 - name: Copy rabbit mq sevice file
   ansible.builtin.copy:
-    src: rabbitmq.service
+    src: rabbitmq.repo
     dest: /etc/yum.repos.d/rabbitmq.repo
 
 - name: install rabbit mq server
