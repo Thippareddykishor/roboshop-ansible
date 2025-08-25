@@ -4,7 +4,7 @@
     state: present
 
 - name: include artifact download
-  anible.builtin.include_tasks:
+  ansible.builtin.include_tasks:
     file: artifact_download.yml
 
 - name: install maven dependieces 
