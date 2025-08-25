@@ -10,11 +10,11 @@
 
 - name: load schema 
   ansible.builtin.shell:
-    mysql -h mysql-dev.kommanuthala.store -uroot -pRoboShop@1 < /app/db/schema.sql
+    mysql -h mysql-{{ env }}.kommanuthala.store -uroot -pRoboShop@1 < /app/db/schema.sql
 
 - name: load user creation
   ansible.builtin.shell:
-    mysql -h mysql-dev.kommanuthala.store -uroot -pRoboShop@1 < /app/db/app-user.sql
+    mysql -h mysql-{{ env }}.kommanuthala.store -uroot -pRoboShop@1 < /app/db/app-user.sql
 - name: load master data
   ansible.builtin.shell:
-    mysql -h mysql-dev.kommanuthala.store -uroot -pRoboShop@1 < /app/db/master-data.sql
+    mysql -h mysql-{{ env }}.kommanuthala.store -uroot -pRoboShop@1 < /app/db/master-data.sql
