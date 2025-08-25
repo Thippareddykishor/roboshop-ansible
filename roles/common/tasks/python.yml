@@ -8,7 +8,6 @@
 
 - name: include artifact download
   ansible.buitlin.include_tasks: 
-    name: common
     file: artifact_download.yml
 
 - name: install python dependies
@@ -19,4 +18,4 @@
 
 - name: include systmd service
   ansible.builtin.include_tasks:
-    
+    file: systemd_setup.yml
