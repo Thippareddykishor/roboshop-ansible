@@ -7,7 +7,7 @@
     state: present
 
 - name: include artifact download
-  ansible.buitlin.include_tasks: 
+  ansible.builtlin.include_tasks: 
     file: artifact_download.yml
 
 - name: install python dependies
