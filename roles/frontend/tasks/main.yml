@@ -9,6 +9,10 @@
      name: nginx
      state: present 
 
+- name: get secrects
+  ansible.builtin.set_fact:
+    secrets: "{{ lookup('community.hashi_vault.hashi_vault', 'secret=roboshop-{{env}}/data/{{component_name}} token={{ vault_token }} url=http://vault-internal.kommanuthala.store:8200') }}"
+
 - name: start nginx
   ansible.builtin.systemd_service:
      name: nginx
